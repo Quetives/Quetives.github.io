@@ -1,0 +1,50 @@
+function validateForm() {
+    var x = document.forms["myForm"]["full_name"].value;
+    if (x == "") {
+        alert("Name must be filled out");
+        return false;
+    }
+
+    var y = document.forms["myForm"]["Contact"].value;
+    if (y == "") {
+        alert("Phone Number: must be filled out");
+        return false;
+    }
+}
+
+function openForm() {
+    document.getElementById("myForm").style.display = "block";
+  }
+  
+  function closeForm() {
+    document.getElementById("myForm").style.display = "none";
+  }
+
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+ 
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+ 
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+
+ 

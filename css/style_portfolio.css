@@ -1,59 +1,107 @@
+
+html {
+    background-color: black;
+    scroll-behavior: smooth;
+}
+
 /* Body */
 body {
     margin: 0%;
+    opacity: 1;
+    transition: 3s opacity;
+    letter-spacing: .2vw;
+    font-family: Avant Garde, Helvetica;
+    font-size: 1.5vw;
+}
+
+body.fade-out {
+    opacity: 0;
+    transition: none;
+}
+
+@keyframes moveNav {
+    from {left: -100vw;}
+    to {left: 0vw;}
+}
+
+@keyframes movenavText {
+    from {top: -100vw;}
+    to {top: -15vw;}
+}
+
+@keyframes movevideoText {
+    from {top: -100vw;}
+    to {top: 0px;}
 }
 
 /* Navbar */
-.Navbar {
+.navbar {
     overflow: hidden;
     background-color: black;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1;
+    -webkit-animation: moveNav 5s;
+    animation: moveNav 5s;
 }
 
 /* Navbar text */
-.Navbar a {
+.navbar a {
     float: left;
     display: block;
-    color: white;
-    padding: 14px 16px;
+    color: #f2f2f2;
+    padding: .75vw 1vw;
     text-decoration: none;
     font-family: Avant Garde, Helvetica;
-    font-size: 20px;
+    font-size: 1.5vw;
     text-align: center;
+    position: relative;
+    letter-spacing: .2vw;
+    -webkit-animation: movenavText 5.75s;
+    animation: movenavText 5.75s;
 }
+
+
 
 /*Navbar hover effect */
 .navbar a:hover {
     background-color: #F4F4F4;
     color: black;
     font-weight: bold;
+    cursor: pointer;
+    -webkit-transition-duration: 1s;
+    transition-duration: 1s;
 }
 
-/* Navbar home button */
-.Navbar a.active {
-    background-color: darkgray;
+.navbar a.active {
+    background-color: #000066;
 }
 
 /* Video */
-#typing_Video {
-    position: fixed;
-    right: 0;
-    bottom: 0;
-    min-width: 100%;
-    z-index: -1;
+.typing_Video {
+   position: fixed;
+   right: 0;
+   bottom: 0;
+   min-height: 100%;
+   top: 0;
+   z-index: -1;
 }
 
 /* Text over the video */
-.video_text {
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
+.Video_Text {
+    position: absolute;
+    background: rgba(0, 0, 0, .5);
     width: 100%;
-    padding: 20px;
+    color: white;
+    top: -15vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
     margin-top: 23%;
+    animation: movevideoText 4s;
+    -webkit-animation: movenavText 4s;
 }
+
 
 /* Table */
 * {
@@ -67,6 +115,10 @@ body {
     padding-top: 3%;
     height: 400px;
     background-color: #f2f2f2;
+    text-align: center;
+}
+.Column_1 p {
+    text-align: center;
 }
 
 .Column_2 {
@@ -75,7 +127,11 @@ body {
     padding: 10px;
     padding-top: 1.9%;
     height: 400px;
-    background-color: blue;
+    background-color: #000066;
+}
+
+.Column_2 img {
+    box-shadow: 0px 5px 10px 12px rgba(0, 0, 0, .75);
 }
 
 .Column_3 {
@@ -84,7 +140,17 @@ body {
     padding: 10px;
     padding-top: 3.5%;
     height: 450px;
-    background-color: blue;
+    background-color: #000066;
+}
+
+.Column_4 {
+    float: left;
+    width: 50%;
+    padding: 10px 0px;
+    padding-top: 3%;
+    height: 450px;
+    background-color: #f2f2f2;
+    text-align: center;
 }
 
 .Row:after {
@@ -99,7 +165,7 @@ h1 {
     font-family: "Trebuchet MS", Optima;
     text-align: center;
     margin-top: 3%;
-    color: #1a1a1a;
+    color: #ffcb08;
 }
 
 /* Paragraph elements */
@@ -133,8 +199,12 @@ q {
     font-weight: bold;
 }
 
+#main {
+    position: absolute;
+}
+
 /* Image elements */
-img {
+#main img {
     filter: grayscale(75%);
     border-radius: 8px;
     max-width: 100%;
@@ -204,19 +274,211 @@ p:hover {
 
 /*Heading 1 element hover effect */
 h1:hover {
-    color: black;
     font-weight: normal;
 }
 
 /* Image element hover effects */
 img:hover {
     filter: grayscale(5%);
-    transition: transform 1s;
-    transform: scale(1.1);
+    animation: zoom_in_out 15s infinite;
 }
 
 /*Footer element */
 footer {
     padding: 2%;
     background-color: White;
+}
+
+@keyframes mymove {
+    0% {
+        background-color: white;
+    }
+    50% {
+        background-color: #555;
+    }
+    100% {
+        background-color: white;
+    }
+}
+
+@keyframes zoom_in_out {
+    0% {
+        transform: scale(1,1);
+    }
+    50% {
+        transform: scale(1.1,1.1);
+    }
+    100% {
+        transform: scale(1,1);
+    }
+}
+
+.slideshow-container {
+    max-width: 400px;
+    position: absolute;
+    margin: auto;
+    Right: 40%;
+    bottom: 0%;
+}
+
+.slideshow-container img {
+    border-radius: 6px;
+}
+
+.mySlides {
+    display: none;
+}
+
+.mySlides img {
+    text-align: center;
+    max-width: 100%;
+    max-height: 1000px;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, .8);
+}
+
+.text {
+    color: #ffcb08;
+    font-size: 30px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: -50px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    display: none;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    position: relative;
+    bottom: -75px;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+
+/* =====================================================================
+
+/* button used to open the contact form - fixed at the bottome of the page */
+.contact-button {
+    bottom: 1.75vw;
+    right: 1.75vw;
+    width: 25vw;  
+    background-color: white;
+    color: black;
+    border: solid;
+    cursor: pointer;
+    position: fixed;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    right: 15px;
+    border: 3px solid #f1f1f1;
+    z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+    max-width: 300px;
+    padding: 10px;
+    background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+    background-color: #0c4da2;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-bottom: 10px;
+    opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+    background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+    animation-name: example;
+    animation-duration: 12s;
 }
