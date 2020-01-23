@@ -78,12 +78,16 @@ body.fade-out {
     background-color: #000066;
 }
 
+.home {
+    overflow: hidden;
+}
+
 /* Video */
 .typing_Video {
    position: fixed;
    right: 0;
    bottom: 0;
-   min-height: 100%;
+   height: 100%;
    top: 0;
    z-index: -1;
 }
@@ -201,6 +205,7 @@ q {
 
 #main {
     position: absolute;
+    
 }
 
 /* Image elements */
