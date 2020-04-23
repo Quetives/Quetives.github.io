@@ -1,173 +1,93 @@
-<!DOCTYPE html>
-<html lang=en>
+﻿<!DOCTYPE html>
 
-    <!-- Header -->
-        <head>
-            <meta charset="utf-8">
-            <title>Richard Quetives</title>
-            <link rel="stylesheet" type="text/css" href="./css/style_portfolio.css">
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href=".CSS/PersonalStyle.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        body {
+            margin: 0%;
+            opacity: 1;
+            transition: 3s opacity;
+            letter-spacing: .2vw;
+            font-family: Avant Garde, Helvetica;
+            font-size: 1.5vw;
+        }
+        .bg-1 {
+            /*background-color: #E0FFFF;*/
+            background-image: linear-gradient(to right, #008080, #E0FFFF);
+            color: #ffffff;
+        }
+
+        .bg-2 {
+            /*background-color: #000066;/*
+            /*background-image: linear-gradient(to right, #6699cc, #0c4da2);*/
+            color: #0c4da2;
+        }
+
+        .bg-3 {
+            background-color: #474e5d;
+            /*background-image: linear-gradient(to right, #696969, #D3D3D3);*/
+            color: #ffffff;
             
-        </head>
+        }
 
-    <!-- BODY -->
-    <body class="background fade-out">
+        .h1 {
+            font-weight: bold;
+        }
+        .img-size {
+            width: 250px;
+            height: 200px;
+        }
+    </style>
 
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script> 
-        <script>
-        document.body.className += ' fade-out';
-        </script>
+    <title>Richard Quetives</title>
 
-        
-<div id="home"> 
-    
-    <!-- HOME -->
+</head>
+<body>
+    <div class="container-fluid bg-1 text-center">
+        <div class="row">
 
-    <!-- Video -->
-    <video autoplay muted loop id="typing_Video">
-        <source src="Pexels Videos 3766.mp4" type="video/mp4">
-        Your browser does not support HTML5 video. 
-    </video>
-
-    <!-- Navbar -->
-        <div class="navbar">
-            <a class="active" href="#home">Home</a>
-            <a href="#slideshow-container">Slideshow</a>
-            <a href="#About">About</a>
-            <a href="#GitHub">GitHub</a>
-            <a onclick="openForm()">Contact</a>
-        </div>
-
-    <div class="btn cancel" onclick="closeForm()"></div>
-
-        <br>
-        <br>
-
-    <!-- Video text -->
-        <div class="Video_Text">
-            <h1>Richard Quetives' Portfolio</h1>
-                <p style="color: white; text-align: center;">My name is Richard Quetives. Welcome to my portfolio website. On it, I will tell you about my background and experience.
-                <br><br>Thanks for stopping by and enjoy!
-                </p>    
-        </div>
-    
-
-        <!-- The Slideshow Container -->
-       <div class="slideshow-container" id="slideshow-container">
-
-
-        <!-- The individual slides -->
-        <div class="mySlides fade">
-            <div class="numbertext">1 / 4</div>
-            <img src="./images/-9011721567353889635.jpg">
-            <div class="text">I would like to help you with your project.</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">2 / 4</div>
-            <img src="./images/designer-monitor-screen-concept-965345.jpg">
-            <div class="text">Full-stack developer trained in HTML CSS and JavaScript!</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">3 / 4</div>
-            <img src="./images/pexels-1936299.jpg">
-            <div class="text">I am also trained in SQL and C#!</div>
-        </div>
-
-        <div class="mySlides fade">
-            <div class="numbertext">4 / 4</div>
-            <img src="./images/hands-coffee-smartphone-technology.jpg" onclick="openForm()">
-            <div class="text">Contact me today!</div>
-        </div>
-    
-
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-       
-       <br>
-
-       <!-- dots and circles underneath -->
-       <div style="text-align: center;">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        </div>
-    </div>
-</div>
-
-
-    <div id="main">  
-
-    <!-- About Section -->
-        <div class="Row" id="About">
-            <div class="Column_2">
-                <img src="./images/abstract-business-code-coder-270348.jpg" alt="">
-            </div>
-        
-            <div class="Column_1">
-                <h1>About</h1>
-                <p>I am a software developer who loves to code! A safety and compliance professional who wanted to make the switch to software development!<br><br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more. <br><br>I am a full-stack developer and would love to work with you on your project. <a href="javascript:openForm()">Contact</a> me!</p>
-            </div>
-        </div>
-
-    <!-- Github section -->
-        <div class="Row" id="GitHub">
-            <div class="Column_1">
-                <h1>Github</h1>
-                    <p>You can view my coding projects on my Github profile here:<br>
-                    <center><a href="https://github.com/Quetives" target="_blank">Quetives GitHub</a></center></p>
+            <div class="col-sm-6">
+                <h1>Richard Quetives<br />
+                <br />Software Developer</h1>                
             </div>
 
-            <div class="Column_2">
-                <a href="https://github.com/Quetives" target=""><img src="./images/GitHub.png" alt=""></a>
+            <div class="col-sm-6">
+                <img src="images/richard.jpg" class="img-size img-responsive center-block img-fluid img-circle" alt="Richard">
             </div>
+
         </div>
     </div>
 
-    <!-- Contact section -->
-            
-            <div class="form-popup" id="myForm">
-                <form action="/action_page.php" class="form-container">
-                  <h1>Contact Me</h1>
-                <label for="Fname"><b>First Name:</b></label>
-                <input type="text" placeholder="First Name" name="fname" required>
+    <div class="container-fluid bg-2 text-center">
+        <h1>About Me:</h1>
+        <p>
+            I am a software developer who loves to code! I am self-reliant and capable of solving any problems I encounter. I have experience working with Visual Studio, .Net, Entity Framework and more!
+            <br><br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>’s Software Developer Boot Camp, trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL and C#.
+            <br><br>I am a full-stack developer and would love to work with you on your project.
+        </p>
+    </div>
 
-                <label for="Lname"><b>Last Name:</b></label>
-                <input type="text" placeholder="Last Name" name="lname" required>
+    <div class="container-fluid bg-3 text-center">
+        <h1>My Experience:</h1>
+        <p>
+            You can view my Github profile here:<br>
+            <center><a href="https://github.com/Quetives" target="_blank">Quetives GitHub</a></center>
+        </p>
+        <P><a href="https://github.com/Quetives/SQL_Library_Final" target="_blank">Library Database</a></P>
+        <p><a href="https://github.com/Quetives/HTML-and-CSS-Projects" target="_blank">HTML & CSS Projects</a></p>
+        <p><a href="https://github.com/Quetives/JavaScript-Projects" target="_blank">JavaScript Projects</a></p>
+        <p>
+            Please contact me if your interested in letting me join your team.<br />
+            <a href="mailto:r.quetives@gmail.com" target="_blank" class="btn btn-primary">Email</a>
+        </p>
+    </div>
 
-                  <label for="email"><b>Email:</b></label>
-                  <input type="text" placeholder="Enter Email" name="email" required>
-              
-                  <label for="contact"><b>Phone Number:</b></label>
-                  <input type="text" placeholder="Enter a contact number" name="contact" required>
-
-                  <label for="msg"><b>Message:</b></label>
-                  <input type="text" placeholder="Leave a message..." name="msg" required>
-              
-                  <button type="submit" class="btn">Submit</button>
-                  <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
-                </form>
-              </div>
-
-    <!-- Footer section -->
-        <footer>
-            <p>
-                <center>&copy; Prosper Consulting Inc., <a href="https://learncodinganywhere.com/" target="_blank">The Tech Academy</a></center><br>
-            </p>  
-        </footer>
-
-        <script>
-            $(function() {
-                $('body').removeClass('fade-out');
-            });
-
-            $("#slideshow > div:gt(0)").hide();
-        </script>
-
-
-            </body>
-
-            <script src="./js/JavaScript_portfolio.js"></script>
+</body>
 </html>
